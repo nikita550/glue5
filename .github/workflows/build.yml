@@ -143,6 +143,7 @@ jobs:
               mv target/release/glue5.exe Glue5-windows.exe
               ;;
           macos)
+              export ACTOOL_FLAGS="-skip-errors"
               mise run macos:package
               mv target/package/*.dmg Glue5-macos.dmg
               ;;
